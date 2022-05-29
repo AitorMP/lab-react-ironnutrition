@@ -3,7 +3,6 @@ import React from 'react';
 const FoodBox = (props) => {
   return (
     <div className="box">
-      <h1>Iron Nutrition</h1>
       <article className="media">
         <div className="media-left">
           <figure className="image is-64x64">
