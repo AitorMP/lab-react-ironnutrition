@@ -1,6 +1,12 @@
 import React from 'react';
+import { useState } from 'react';
 
 const FoodBox = (props) => {
+  const [quantity, setQuantity] = useState(0);
+  const handleChangeQuantity = (event) =>
+    setQuantity(event.target.valueAsNumber);
+
+  //
   return (
     <div className="box">
       <article className="media">
@@ -20,7 +26,12 @@ const FoodBox = (props) => {
         <div className="media-right">
           <div className="field has-addons">
             <div className="control">
-              <input className="input" type="number" value="1" />
+              <input
+                className="input"
+                type="number"
+                value={quantity}
+                onChange={handleChangeQuantity}
+              />
             </div>
             <div className="control">
               <button className="button is-info">+</button>
